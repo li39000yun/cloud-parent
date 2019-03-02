@@ -1,0 +1,8 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.tz4cloud.tz.common.security.component.PermissionService,\
+  com.tz4cloud.tz.common.security.component.TzAccessDeniedHandler,\
+  com.tz4cloud.tz.common.security.component.TzSecurityInnerAspect,\
+  com.tz4cloud.tz.common.security.component.ResourceAuthExceptionEntryPoint,\
+  com.tz4cloud.tz.common.security.component.TzResourceServerTokenRelayAutoConfiguration,\
+  com.tz4cloud.tz.common.security.feign.TzFeignClientConfiguration,\
+  com.tz4cloud.tz.common.security.service.TzUserDetailsServiceImpl

@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.tz4cloud.tz.common.core.config.JacksonConfig,\
+  com.tz4cloud.tz.common.core.config.RedisConfig,\
+  com.tz4cloud.tz.common.core.config.RestTemplateConfig,\
+  com.tz4cloud.tz.common.core.config.FilterIgnorePropertiesConfig,\
+  com.tz4cloud.tz.common.core.exception.GlobalExceptionHandler,\
+  com.tz4cloud.tz.common.core.util.SpringContextHolder

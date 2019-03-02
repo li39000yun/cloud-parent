@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.tz4cloud.tz.dbquery.api.feign.fallback.RemoteTokenServiceFallbackImpl,\
+  com.tz4cloud.tz.dbquery.api.feign.factory.RemoteTokenServiceFallbackFactory

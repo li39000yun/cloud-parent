@@ -1,0 +1,27 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: tz-gateway
+  # 配置中心
+  cloud:
+    config:
+      fail-fast: true
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+      discovery:
+        enabled: true
+        service-id: tz-config
+  profiles:
+    active: dev
+
+# 注册中心
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://tz:tz@tz-eureka:8761/eureka/
+
+
