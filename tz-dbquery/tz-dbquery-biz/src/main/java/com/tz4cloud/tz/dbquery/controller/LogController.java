@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tz4cloud.tz.dbquery.api.entity.SysLog;
 import com.tz4cloud.tz.dbquery.api.vo.PreLogVo;
-import com.tz4cloud.tz.dbquery.service.SysLogService;
 import com.tz4cloud.tz.common.core.util.R;
 import com.tz4cloud.tz.common.security.annotation.Inner;
 import lombok.AllArgsConstructor;

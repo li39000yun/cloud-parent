@@ -5,7 +5,6 @@ import com.tz4cloud.tz.dbquery.api.dto.MenuTree;
 import com.tz4cloud.tz.dbquery.api.entity.SysMenu;
 import com.tz4cloud.tz.dbquery.api.vo.MenuVO;
 import com.tz4cloud.tz.dbquery.api.vo.TreeUtil;
-import com.tz4cloud.tz.dbquery.service.SysMenuService;
 import com.tz4cloud.tz.common.core.constant.CommonConstants;
 import com.tz4cloud.tz.common.core.util.R;
 import com.tz4cloud.tz.common.log.annotation.SysLog;

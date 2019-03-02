@@ -1,7 +1,6 @@
 package com.tz4cloud.tz.dbquery.controller;
 
 import com.tz4cloud.tz.dbquery.api.entity.SysDept;
-import com.tz4cloud.tz.dbquery.service.SysDeptService;
 import com.tz4cloud.tz.common.core.util.R;
 import com.tz4cloud.tz.common.log.annotation.SysLog;
 import lombok.AllArgsConstructor;

@@ -7,18 +7,18 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tz4cloud.tz.common.core.config.FilterIgnorePropertiesConfig;
 import com.tz4cloud.tz.common.core.constant.CommonConstants;
+import com.tz4cloud.tz.common.core.constant.EnvironmentConstants;
 import com.tz4cloud.tz.common.core.constant.SecurityConstants;
 import com.tz4cloud.tz.common.core.exception.ValidateCodeException;
 import com.tz4cloud.tz.common.core.util.R;
 import com.tz4cloud.tz.common.core.util.SpringContextHolder;
-import com.tz4cloud.tz.common.core.util.SpringContextUtils;
 import com.tz4cloud.tz.common.core.util.WebUtils;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
+import org.springframework.context.ApplicationContext;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
@@ -67,12 +67,11 @@ public class ValidateCodeGatewayFilter extends AbstractGatewayFilterFactory {
 				}
 
 				//校验验证码
-				// TODO 开发模式，不校验验证码
-				System.out.println(SpringContextUtils.getActiveProfile());
-				 SpringContextHolder.getApplicationContext();
-//				System.out.println(ignoreClients);
-
-//				checkCode(request);
+				ApplicationContext applicationContext = SpringContextHolder.getApplicationContext();
+				// 开发模式，不校验验证码
+				if(!EnvironmentConstants.DEV.equals(applicationContext.getEnvironment().getActiveProfiles()[0])) {
+					checkCode(request);
+				}
 			} catch (Exception e) {
 				ServerHttpResponse response = exchange.getResponse();
 				response.setStatusCode(HttpStatus.PRECONDITION_REQUIRED);

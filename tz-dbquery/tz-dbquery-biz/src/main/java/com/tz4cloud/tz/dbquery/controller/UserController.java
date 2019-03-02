@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tz4cloud.tz.dbquery.api.dto.UserDTO;
 import com.tz4cloud.tz.dbquery.api.entity.SysUser;
-import com.tz4cloud.tz.dbquery.service.SysUserService;
 import com.tz4cloud.tz.common.core.util.R;
 import com.tz4cloud.tz.common.log.annotation.SysLog;
 import com.tz4cloud.tz.common.security.annotation.Inner;
