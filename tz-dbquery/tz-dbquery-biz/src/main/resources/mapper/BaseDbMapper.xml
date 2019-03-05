@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~
+  ~      Copyright (c) 2018-2025, lengleng All rights reserved.
+  ~
+  ~  Redistribution and use in source and binary forms, with or without
+  ~  modification, are permitted provided that the following conditions are met:
+  ~
+  ~ Redistributions of source code must retain the above copyright notice,
+  ~  this list of conditions and the following disclaimer.
+  ~  Redistributions in binary form must reproduce the above copyright
+  ~  notice, this list of conditions and the following disclaimer in the
+  ~  documentation and/or other materials provided with the distribution.
+  ~  Neither the name of the Tz4cloud.com developer nor the names of its
+  ~  contributors may be used to endorse or promote products derived from
+  ~  this software without specific prior written permission.
+  ~  Author: lengleng (wangiegie@gmail.com)
+  ~
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tz4cloud.tz.dbquery.mapper.BaseDbMapper">
+
+  <resultMap id="baseDbMap" type="com.tz4cloud.tz.dbquery.api.entity.BaseDb">
+                  <id property="id" column="id"/>
+                        <result property="sysCode" column="sys_code"/>
+                        <result property="sysName" column="sys_name"/>
+                        <result property="type" column="type"/>
+                        <result property="address" column="address"/>
+                        <result property="port" column="port"/>
+                        <result property="dbName" column="db_name"/>
+                        <result property="userName" column="user_name"/>
+                        <result property="remark" column="remark"/>
+                        <result property="sequence" column="sequence"/>
+                        <result property="status" column="status"/>
+                        <result property="createName" column="create_name"/>
+                        <result property="createTime" column="create_time"/>
+            </resultMap>
+
+  <!--baseDb简单分页查询-->
+  <select id="getBaseDbPage" resultMap="baseDbMap">
+    SELECT
+                  id,
+                        sys_code,
+                        sys_name,
+                        type,
+                        address,
+                        port,
+                        db_name,
+                        user_name,
+                        remark,
+                        sequence,
+                        status,
+                        create_name,
+                        create_time
+              FROM base_db
+    <where>
+              <if test="baseDb.id != null and baseDb.id.trim() != ''">
+          AND id = #{baseDb.id}
+        </if>
+              <if test="baseDb.sysCode != null and baseDb.sysCode.trim() != ''">
+          AND sys_code = #{baseDb.sysCode}
+        </if>
+              <if test="baseDb.sysName != null and baseDb.sysName.trim() != ''">
+          AND sys_name = #{baseDb.sysName}
+        </if>
+              <if test="baseDb.type != null and baseDb.type.trim() != ''">
+          AND type = #{baseDb.type}
+        </if>
+              <if test="baseDb.address != null and baseDb.address.trim() != ''">
+          AND address = #{baseDb.address}
+        </if>
+              <if test="baseDb.port != null and baseDb.port.trim() != ''">
+          AND port = #{baseDb.port}
+        </if>
+              <if test="baseDb.dbName != null and baseDb.dbName.trim() != ''">
+          AND db_name = #{baseDb.dbName}
+        </if>
+              <if test="baseDb.userName != null and baseDb.userName.trim() != ''">
+          AND user_name = #{baseDb.userName}
+        </if>
+              <if test="baseDb.remark != null and baseDb.remark.trim() != ''">
+          AND remark = #{baseDb.remark}
+        </if>
+              <if test="baseDb.sequence != null and baseDb.sequence.trim() != ''">
+          AND sequence = #{baseDb.sequence}
+        </if>
+              <if test="baseDb.status != null and baseDb.status.trim() != ''">
+          AND status = #{baseDb.status}
+        </if>
+              <if test="baseDb.createName != null and baseDb.createName.trim() != ''">
+          AND create_name = #{baseDb.createName}
+        </if>
+              <if test="baseDb.createTime != null and baseDb.createTime.trim() != ''">
+          AND create_time = #{baseDb.createTime}
+        </if>
+          </where>
+  </select>
+
+
+
+</mapper>
