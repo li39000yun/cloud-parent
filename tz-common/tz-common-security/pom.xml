@@ -32,5 +32,11 @@
 			<artifactId>tz-upms-api</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		<!--DB-QUERY API-->
+		<dependency>
+			<groupId>com.tz4cloud</groupId>
+			<artifactId>tz-dbquery-api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 </project>

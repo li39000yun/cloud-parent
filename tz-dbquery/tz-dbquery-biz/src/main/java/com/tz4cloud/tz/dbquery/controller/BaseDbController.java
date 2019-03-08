@@ -26,6 +26,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 /**
  * 数据库配置
@@ -39,6 +41,11 @@ import org.springframework.web.bind.annotation.*;
 public class BaseDbController {
 
   private final BaseDbService baseDbService;
+
+  @RequestMapping("/list")
+  public R<List<BaseDb>> list() {
+    return new R<>(baseDbService.list());
+  }
 
   /**
    * 简单分页查询

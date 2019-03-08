@@ -18,4 +18,9 @@ public interface ServiceNameConstants {
 	 */
 	String UMPS_SERVICE = "tz-upms";
 
+	/**
+	 * DB_QUERY数据库查询模块
+	 */
+	String DBQUERY_SERVICE = "tz-dbquery";
+
 }
