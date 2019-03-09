@@ -23,11 +23,11 @@ public class HelloController {
     @GetMapping("/query")
     public String query() {
         System.out.println("in===============================");
-//        R rs = remoteBaseDbService.list();
-//        System.out.println(JSONUtil.toJsonStr(rs));
+        R rs = remoteBaseDbService.list();
+        System.out.println(JSONUtil.toJsonStr(rs));
         System.out.println("out===============================");
 //        return "hello:"+JSONUtil.toJsonStr(rs);
-        return "h";
+        return JSONUtil.toJsonStr(rs);
     }
 
 }

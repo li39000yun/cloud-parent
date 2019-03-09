@@ -37,10 +37,10 @@ spring:
         predicates:
         - Path=/gen/**
       # 数据库查询模块
-        - id: tz-dbquery
+      - id: tz-dbquery
         uri: lb://tz-dbquery
         predicates:
-          - Path=/dbquery/**
+        - Path=/dbquery/**
 
 
 security:
