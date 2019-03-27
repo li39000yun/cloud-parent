@@ -1,27 +1,23 @@
-server:
-  port: 5555
-
 spring:
+  profiles:
+    active: test
   application:
     name: tz-gateway
-  # 配置中心
   cloud:
-    config:
-      fail-fast: true
-      name: ${spring.application.name}
-      profile: ${spring.profiles.active}
+    nacos:
+      # 配置中心
+      config:
+        server-addr: tz-nacos:8848
+        ext-config:
+          -
+            data-id: application-dev.yml
+            group: tz4cloud
+            refresh: true
+          -
+            data-id: tz-gateway-dev.yml
+            group: tz4cloud
+            refresh: true
+      # 注册中心
       discovery:
-        enabled: true
-        service-id: tz-config
-  profiles:
-    active: dev
-
-# 注册中心
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://tz:tz@tz-eureka:8761/eureka/
-
+        server-addr: tz-nacos:8848
 

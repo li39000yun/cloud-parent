@@ -11,6 +11,7 @@
 
     <properties>
         <spring-boot.version>2.0.8.RELEASE</spring-boot.version>
+        <nacos.version>0.2.1.RELEASE</nacos.version>
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
         <spring-platform.version>Cairo-SR7</spring-platform.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,11 +32,23 @@
     </properties>
 
     <dependencies>
-        <!--eureka 客户端-->
+        <!--nacos 服务发现客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>${nacos.version}</version>
         </dependency>
+        <!--配置中心 客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>${nacos.version}</version>
+        </dependency>
+        <!--eureka 客户端-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+        <!--</dependency>-->
         <!--配置文件处理器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

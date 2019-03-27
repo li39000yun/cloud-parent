@@ -5,7 +5,6 @@ import com.tz4cloud.tz.common.core.util.R;
 import com.tz4cloud.tz.dbquery.api.feign.RemoteBaseDbService;
 import com.tz4cloud.tz.dbquery.api.feign.RemoteTokenService;
 import lombok.AllArgsConstructor;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

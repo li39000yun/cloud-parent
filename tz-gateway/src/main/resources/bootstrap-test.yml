@@ -1,0 +1,9 @@
+server:
+  port: 5556
+
+# 根据自己nacos server生成的命名空间ID进行修改
+spring:
+  cloud:
+    nacos:
+      config:
+        namespace: da8ce409-f4b1-4d45-a49c-6b4152d303b8

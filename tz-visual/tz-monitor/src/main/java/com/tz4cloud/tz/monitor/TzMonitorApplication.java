@@ -4,6 +4,7 @@ package com.tz4cloud.tz.monitor;
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author tz
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @EnableAdminServer
 @SpringBootApplication
+@EnableDiscoveryClient
 public class TzMonitorApplication {
 
 	public static void main(String[] args) {

@@ -18,5 +18,6 @@
 		<module>tz-common-core</module>
 		<module>tz-common-log</module>
 		<module>tz-common-security</module>
-	</modules>
+        <module>tz-common-app-base</module>
+    </modules>
 </project>
