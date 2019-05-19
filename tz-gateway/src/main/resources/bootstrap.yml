@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: test
+    active: dev
   application:
     name: tz-gateway
   cloud:
@@ -10,11 +10,11 @@ spring:
         server-addr: tz-nacos:8848
         ext-config:
           -
-            data-id: application-dev.yml
+            data-id: application.yml
             group: tz4cloud
             refresh: true
           -
-            data-id: tz-gateway-dev.yml
+            data-id: tz-gateway.yml
             group: tz4cloud
             refresh: true
       # 注册中心

@@ -21,11 +21,11 @@ spring:
         server-addr: tz-nacos:8848
         ext-config:
           -
-            data-id: application-dev.yml
+            data-id: application.yml
             group: tz4cloud
             refresh: true
           -
-            data-id: tz-auth-dev.yml
+            data-id: tz-auth.yml
             group: tz4cloud
             refresh: true
       # 注册中心

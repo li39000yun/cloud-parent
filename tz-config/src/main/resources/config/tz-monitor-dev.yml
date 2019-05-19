@@ -1,6 +1,0 @@
-spring:
-  # 安全配置
-  security:
-    user:
-      name: tz     # Tz
-      password: tz # Tz
