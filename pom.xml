@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <spring-boot.version>2.0.8.RELEASE</spring-boot.version>
+        <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
         <nacos.version>0.2.1.RELEASE</nacos.version>
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
         <spring-platform.version>Cairo-SR7</spring-platform.version>
@@ -108,6 +108,7 @@
         <module>tz-common</module>
         <module>tz-visual</module>
         <module>tz-dbquery</module>
+        <module>tz-laboratory</module>
     </modules>
 
     <dependencyManagement>
