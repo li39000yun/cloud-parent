@@ -24,5 +24,11 @@
             <artifactId>oval</artifactId>
             <version>1.85</version>
         </dependency>
+        <!-- 文件服务器 -->
+        <dependency>
+            <groupId>org.csource</groupId>
+            <artifactId>fastdfs-client-java</artifactId>
+            <version>1.27-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
