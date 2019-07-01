@@ -44,11 +44,6 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
             <version>${nacos.version}</version>
         </dependency>
-        <!--eureka 客户端-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-        <!--</dependency>-->
         <!--配置文件处理器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -100,8 +95,6 @@
     </dependencies>
 
     <modules>
-        <module>tz-eureka</module>
-        <module>tz-config</module>
         <module>tz-gateway</module>
         <module>tz-auth</module>
         <module>tz-upms</module>
